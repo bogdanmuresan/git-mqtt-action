@@ -3,7 +3,7 @@
 ```
 - uses: bogdanmuresan/git-mqtt-action@master
   with:
-    host: 'mqtt-example-host.com'
+    host: 'mqtt.eclipse.org'
     topic: 'mqtt-topic'
     message: 'My awesome message from the Github Workflow'
 ```
