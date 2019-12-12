@@ -21,4 +21,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.type }} -t ${{ inputs.topic }} -m ${{ inputs.message }} -h ${{ inputs.host }}
+    - ${{ inputs.type }} -t ${{ inputs.topic }} -m "${{ inputs.message }}" -h ${{ inputs.host }}
