@@ -20,5 +20,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
+  entrypoint:
     - ${{ inputs.type }} -t ${{ inputs.topic }} -m "${{ inputs.message }}" -h ${{ inputs.host }}
