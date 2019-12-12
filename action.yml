@@ -1,0 +1,24 @@
+name: 'Mqtt Command'
+description: 'Run mqtt command'
+inputs:
+  type:
+    description: 'pub or sub'
+    required: false
+    default: 'pub'
+  topic:
+    description: 'mqtt topic'
+    required: false
+    default: 'deploy'
+  host:
+    description: 'mqtt host'
+    required: true
+    default: 'mqtt.eclipse.org'
+  message:
+    description: 'message to send'
+    required: false
+    default: 'Hello world from git actions!'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.type }} -t ${{ inputs.topic }} -m ${{ inputs.message }} -h ${{ inputs.host }}
